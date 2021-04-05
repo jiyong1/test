@@ -26,5 +26,10 @@
     if (pageYOffset != 0){
       navClose();
     }
-  });      
+  });
+  topNavElem.addEventListener('onclick', function(){
+    if (pageYOffset != 0){
+      navClose();
+    }
+  });  
 })();
