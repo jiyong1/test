@@ -1,35 +1,87 @@
 (function(){
   const topNavElem = document.querySelector('.top-nav');
-  const logoImg = document.querySelector('.logo-img');
   const navNameElem = document.querySelector('.b-name');
   const navlistElem = document.querySelector('.nav-list');
+  const toggleBtnElem = document.querySelector('.toggle-btn');
+  const logoConElem = document.querySelector('.logo-con');
+  let toggle = false;
+
   function navOpen(){
     navNameElem.style.display = 'block';
-    navlistElem.style.display = 'flex';
     topNavElem.style.height = '6rem';
+    if (window.innerWidth < 576) {
+      toggleBtnElem.style.display = 'flex';
+      navlistElem.style.display = 'none';
+    }
+    else{
+      toggleBtnElem.style.display = 'none';
+      navlistElem.style.display = 'flex';
+    }
   }
+
+  function logoAuto(){
+    logoConElem.style.height = '100%';
+  }
+  function listDrop(){
+    topNavElem.style.height = '15rem';
+    setTimeout(function(){
+      navlistElem.style.display = 'flex';
+    }, 200);
+  }
+
   function navClose(){
     navNameElem.style.display = 'none';
     navlistElem.style.display = 'none';
+    toggleBtnElem.style.display = 'none';
     topNavElem.style.height = '4rem';
   }
+
+  function resizeHandler(){
+    navOpen();
+  }
+
+  function toggleBtnClick(){
+    // 토글 스위치 off
+    if (toggle){
+      setTimeout(logoAuto, 200);
+      topNavElem.style.height = '6rem';
+      navlistElem.style.display = 'none';
+      toggle = false;
+    }
+    // 토글 스위치 on
+    else{
+      logoConElem.style.height = '6rem';
+      setTimeout(listDrop, 200);
+      toggle = true;
+    }
+  }
+
   window.addEventListener('scroll', function(){
     if(pageYOffset == 0){
       navOpen();
     }
     else{
-      navClose();
+      if (toggle){
+        toggle = false;
+        setTimeout(logoAuto, 100);
+        navClose();
+      }
+      else{
+        navClose();
+      }
     }
   });
+
+  window.addEventListener('resize', resizeHandler);
   topNavElem.addEventListener('mouseenter', navOpen);
+  logoConElem.addEventListener('click', navOpen);
   topNavElem.addEventListener('mouseleave', function(){
     if (pageYOffset != 0){
       navClose();
     }
   });
-  topNavElem.addEventListener('onclick', function(){
-    if (pageYOffset != 0){
-      navClose();
-    }
-  });  
+
+  toggleBtnElem.addEventListener('click', toggleBtnClick);
+
+  resizeHandler();
 })();
