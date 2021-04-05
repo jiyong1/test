@@ -4,6 +4,10 @@
   const navlistElem = document.querySelector('.nav-list');
   const toggleBtnElem = document.querySelector('.toggle-btn');
   const logoConElem = document.querySelector('.logo-con');
+  const navModeElem = document.querySelector('.nav-mode');
+  const modeBtnElem = document.querySelector('#mode-btn');
+  const circleElem = document.querySelector('.btn-circle');
+  const modeTextElem = document.querySelector('.mode-text');
   let toggle = false;
 
   function navOpen(){
@@ -23,7 +27,7 @@
     logoConElem.style.height = '100%';
   }
   function listDrop(){
-    topNavElem.style.height = '15rem';
+    topNavElem.style.height = '18rem';
     setTimeout(function(){
       navlistElem.style.display = 'flex';
     }, 200);
@@ -56,6 +60,19 @@
     }
   }
 
+  function modeChange(){
+    document.body.classList.toggle('light');
+    topNavElem.classList.toggle('light');
+    circleElem.classList.toggle('light');
+    modeBtnElem.classList.toggle('light');
+    if (modeTextElem.innerHTML == 'dark mode'){
+      modeTextElem.innerHTML = 'light mode';
+    }
+    else{
+      modeTextElem.innerHTML = 'dark mode';
+    }
+  }
+
   window.addEventListener('scroll', function(){
     if(pageYOffset == 0){
       navOpen();
@@ -82,6 +99,6 @@
   });
 
   toggleBtnElem.addEventListener('click', toggleBtnClick);
-
+  navModeElem.addEventListener('click', modeChange);
   resizeHandler();
 })();

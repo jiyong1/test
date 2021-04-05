@@ -4,7 +4,7 @@
   top: 0;
   width: 100vw;
   height: 6rem;
-  background-color: #333;
+  background-color: #222;
   display: flex;
   /* position: relative; */
   justify-content: space-between;
@@ -48,7 +48,7 @@
 .nav-list li {
   list-style: none;
 }
-.nav-list li a {
+.nav-list li .item {
   text-decoration: none;
   padding: 0.2rem;
   display: block;
@@ -113,7 +113,7 @@
     align-items: start;
   }
 
-  .nav-list li a {
+  .nav-list li .item {
     text-align: center;
   }
 
@@ -129,4 +129,11 @@
     border-bottom: solid #888;
     color: #888;
   }
+  .nav-mode {
+    display: none;
+  }
+}
+
+.top-nav.light {
+  background-color: #333;
 }

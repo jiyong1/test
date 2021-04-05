@@ -5,7 +5,13 @@ body {
   -webkit-overflow-scrolling: touch;
   font-family: 'Noto Sans KR', sans-serif;
   height: 1000vw;
-  background: #f1f0e8;
+  background: #303030;
+  color: whitesmoke;
+  transition: .5s;
+}
+body.light {
+  background-color: #f1f0e8;
+  color: #303030;
 }
 .nav-margin {
   margin-top: 8rem;

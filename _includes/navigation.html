@@ -3,7 +3,7 @@
   <div class="logo-con">
     <img src="/assets/images/seventwo_logo.png" alt="seventwo 로고 이미지" class="logo-img">
   </div>
-  <div class="b-name"><a href="/">Seven Two</a></div>
+  <div class="b-name"><a href="/">SevenTwo</a></div>
   <div class="toggle-btn">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -13,11 +13,12 @@
     <ul>
       {% for item in site.data.navigation %}
         <li class="nav-items">
-          <a href="{{ item.link }}" class="{% if page.url == item.link %} current-link {% else %} other-link {% endif %}">
+          <a href="{{ item.link }}" class="item{% if page.url == item.link %} current-link {% else %} other-link {% endif %}">
             {{ item.name }}
           </a>
         </li>
       {% endfor %}
+      <li class="nav-items nav-mode"><p class="item other-link">mode change</p></li>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,49 @@
+.mode-con{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mode-btn{
+  position: relative;
+  width: 90px;
+  height: 40px;
+  border: solid whitesmoke;
+  border-radius: 20px;
+  margin: 0 .5rem;
+}
+.btn-circle{
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 28px;
+  height: 28px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.mode-text {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+@media (min-width: 576px){
+  .mode-con {
+    display: flex;
+  }
+}
+
+.btn-circle.light{
+  transform: translateX(50px);
+  background-color: #303030;
+}
+
+#mode-btn.light{
+  border-color: #303030;
+}
