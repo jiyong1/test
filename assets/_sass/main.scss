@@ -1,3 +1,9 @@
+:root {
+  --bg-light-color: #f1f0e8;
+  --dark-color: #303030;
+  --border-light-color: whitesmoke;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,13 +11,14 @@ body {
   -webkit-overflow-scrolling: touch;
   font-family: 'Noto Sans KR', sans-serif;
   height: 1000vw;
-  background: #303030;
-  color: whitesmoke;
-  transition: .5s;
 }
-body.light {
-  background-color: #f1f0e8;
-  color: #303030;
+body[data-mode='dark'] {
+  background: var(--dark-color);
+  color: var(--border-light-color);
+}
+body[data-mode='light'] {
+  background-color: var(--bg-light-color);
+  color: var(--dark-color);
 }
 .nav-margin {
   margin-top: 8rem;

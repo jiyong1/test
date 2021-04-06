@@ -1,6 +1,9 @@
 - name: Home
   link: /
+  real: /
 - name: About
-  link: /about.html
+  link: /about
+  real: /about.html
 - name: new
-  link: /newnav.html
+  link: /newnav
+  real: /newnav.html

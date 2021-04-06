@@ -129,11 +129,8 @@
     border-bottom: solid #888;
     color: #888;
   }
-  .nav-mode {
-    display: none;
-  }
 }
 
-.top-nav.light {
+.top-nav[data-scheme='dark'] {
   background-color: #333;
 }

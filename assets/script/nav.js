@@ -4,10 +4,7 @@
   const navlistElem = document.querySelector('.nav-list');
   const toggleBtnElem = document.querySelector('.toggle-btn');
   const logoConElem = document.querySelector('.logo-con');
-  const navModeElem = document.querySelector('.nav-mode');
-  const modeBtnElem = document.querySelector('#mode-btn');
-  const circleElem = document.querySelector('.btn-circle');
-  const modeTextElem = document.querySelector('.mode-text');
+  const modeBtnElem = document.querySelector('.mode-con');
   let toggle = false;
 
   function navOpen(){
@@ -16,6 +13,7 @@
     if (window.innerWidth < 576) {
       toggleBtnElem.style.display = 'flex';
       navlistElem.style.display = 'none';
+      modeBtnElem.style.display = 'block';
     }
     else{
       toggleBtnElem.style.display = 'none';
@@ -27,7 +25,7 @@
     logoConElem.style.height = '100%';
   }
   function listDrop(){
-    topNavElem.style.height = '18rem';
+    topNavElem.style.height = '15rem';
     setTimeout(function(){
       navlistElem.style.display = 'flex';
     }, 200);
@@ -38,6 +36,9 @@
     navlistElem.style.display = 'none';
     toggleBtnElem.style.display = 'none';
     topNavElem.style.height = '4rem';
+    if (window.innerWidth < 576) {
+      modeBtnElem.style.display = 'none';
+    }
   }
 
   function resizeHandler(){
@@ -57,19 +58,6 @@
       logoConElem.style.height = '6rem';
       setTimeout(listDrop, 200);
       toggle = true;
-    }
-  }
-
-  function modeChange(){
-    document.body.classList.toggle('light');
-    topNavElem.classList.toggle('light');
-    circleElem.classList.toggle('light');
-    modeBtnElem.classList.toggle('light');
-    if (modeTextElem.innerHTML == 'dark mode'){
-      modeTextElem.innerHTML = 'light mode';
-    }
-    else{
-      modeTextElem.innerHTML = 'dark mode';
     }
   }
 
@@ -99,6 +87,5 @@
   });
 
   toggleBtnElem.addEventListener('click', toggleBtnClick);
-  navModeElem.addEventListener('click', modeChange);
   resizeHandler();
 })();

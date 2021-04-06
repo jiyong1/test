@@ -13,12 +13,11 @@
     <ul>
       {% for item in site.data.navigation %}
         <li class="nav-items">
-          <a href="{{ item.link }}" class="item{% if page.url == item.link %} current-link {% else %} other-link {% endif %}">
+          <a href="{{ item.link }}" class="item{% if page.url == item.real %} current-link {% else %} other-link {% endif %}">
             {{ item.name }}
           </a>
         </li>
       {% endfor %}
-      <li class="nav-items nav-mode"><p class="item other-link">mode change</p></li>
     </ul>
   </div>
 </nav>
