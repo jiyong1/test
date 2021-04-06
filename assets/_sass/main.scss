@@ -13,10 +13,14 @@ body {
   height: 1000vw;
 }
 body[data-mode='dark'] {
+  background: #303030;
+  color: whitesmoke;
   background: var(--dark-color);
   color: var(--border-light-color);
 }
 body[data-mode='light'] {
+  background-color: #f1f0e8;
+  color: #303030;
   background-color: var(--bg-light-color);
   color: var(--dark-color);
 }
