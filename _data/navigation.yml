@@ -2,8 +2,8 @@
   link: /
   real: /
 - name: About
-  link: /about
+  link: /about/
   real: /about.html
-- name: new
-  link: /newnav
-  real: /newnav.html
+- name: Posts
+  link: /posts/
+  real: /posts/
