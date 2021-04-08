@@ -1,24 +1,24 @@
 ---
-layout: default
+layout: post
 title: "Python 에러 처리"
 categories: [python]
 ---
 
 # 에러 & 예외 처리
 
-
+<br>
 
 ## 에러(error)
 
 > 발생할 수 있는 에러의 종류를 확인해보자
 
-
+<br>
 
 ### 문법 에러(Syntax Error)
 
 > 문법 에러가 있는 프로그램은 실행되지 않는다
 
-
+<br>
 
 - 에러 발생 시 `SyntaxError`라는 키워드와 함께, 에러의 상세 내용을 보여줍니다.
 
@@ -26,7 +26,7 @@ categories: [python]
 
 - `parser` 는 줄에서 에러가 감지된 가장 앞의 위치를 가리키는 작은 '화살표(`^`)'를 표시합니다.
 
-
+<br>
 
 ```python
 if True:
@@ -34,6 +34,8 @@ if True:
 else # : 를 넣지 않음
     print('거짓')
 ```
+
+<br>
 
 ```
 File "<ipython-input-2-cd2300dfe57f>", line 3
@@ -45,7 +47,7 @@ SyntaxError: invalid syntax --> SyntaxError !!
 ---
 
 
-
+<br>
 
 
 ## 예외(Exception)
@@ -53,12 +55,11 @@ SyntaxError: invalid syntax --> SyntaxError !!
 > 실행 도중 예상하지 못한 상황(exception)을 맞이하면, 프로그램 실행을 멈춥니다.
 
 
-
 - 문법적으로는 옳지만, 실행시 발생하는 에러입니다.
 
 - *아래 제시된 모든 에러는 `Exception`을 상속받아 이뤄진다.*
 
-
+<br>
 
 ### ZeroDivisionError
 
@@ -67,6 +68,8 @@ SyntaxError: invalid syntax --> SyntaxError !!
 ```python
 10 * (1/0)
 ```
+
+<br>
 
 ```
 ---------------------------------------------------------------------------
@@ -80,7 +83,7 @@ ZeroDivisionError: division by zero
 
 ---
 
-
+<br>
 
 
 
@@ -102,7 +105,7 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 
-
+<br>
 
 ```python
 # 함수 호출 과정에서 TypeError
@@ -119,7 +122,7 @@ TypeError                                 Traceback (most recent call last)
 TypeError: type str doesn't define __round__ method
 ```
 
-
+<br>
 
 ```python
 # 필수 argument 누락
@@ -137,7 +140,7 @@ TypeError                                 Traceback (most recent call last)
 TypeError: sample() missing 1 required positional argument: 'k'
 ```
 
-
+<br>
 
 ```python
 # argument 개수 초과
@@ -156,7 +159,7 @@ TypeError: choice() takes 2 positional arguments but 3 were given
 ---
 
 
-
+<br>
 
 
 ### ValueError
@@ -176,7 +179,7 @@ ValueError                                Traceback (most recent call last)
 ValueError: invalid literal for int() with base 10: '3.5'
 ```
 
-
+<br>
 
 ```python
 # 존재하지 않는 숫자를 찾고자 한다 
@@ -198,7 +201,7 @@ ValueError: 3 is not in list
 ---
 
 
-
+<br>
 
 
 ### IndexError
@@ -222,7 +225,7 @@ IndexError: list index out of range
 
 ---
 
-
+<br>
 
 ### KeyError
 
@@ -249,7 +252,7 @@ KeyError: 'queen'
 
 
 
-
+<br>
 
 ### ModuleNotFoundError
 
@@ -267,7 +270,7 @@ ModuleNotFoundError                       Traceback (most recent call last)
 ModuleNotFoundError: No module named 'jiyong'
 ```
 
-
+<br>
 
 ### ImportError
 
@@ -286,7 +289,7 @@ ImportError                               Traceback (most recent call last)
 ImportError: cannot import name 'sampl' from 'random' 
 ```
 
-
+<br>
 
 ### KeyboardInterrupt
 
@@ -303,7 +306,7 @@ Traceback (most recent call last):
 KeyboardInterrupt
 ```
 
-
+<br>
 
 ## 예외 처리(Exception Handling)
 
@@ -348,7 +351,7 @@ except IndexError as err: # 변수처럼
     print(f'{err}, 오류가 발생했습니다.')
 ```
 
-
+<br>
 
 #### 복수의 예외처리
 
@@ -370,7 +373,7 @@ except 예외2:
     <코드 블럭 3>
 ```
 
-
+<br>
 
 - **예시**
 
@@ -394,7 +397,7 @@ except ValueError:
 0으로 어떻게 나누니?
 ```
 
-
+<br>
 
 #### else
 
@@ -443,7 +446,7 @@ else:
 ```
 
 
-
+<br>
 #### finally
 
 - 반드시 수행해야하는 문장은 `finally`를 활용한다.
@@ -464,7 +467,7 @@ finally:
 ```
 
 
-
+<br>
 
 
 - **예시**
@@ -500,7 +503,7 @@ finally:
 
 
 
-
+<br>
 
 #### 예외 발생 시키기(Exception Raising)
 
@@ -528,5 +531,5 @@ def avg(scores):
 avg(9)
 ```
 
-
+<br>
 

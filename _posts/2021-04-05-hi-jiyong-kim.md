@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "포스트 실험입니다."
 categories: [python]
 ---

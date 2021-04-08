@@ -1,12 +1,20 @@
-title: seven two Theme
+
 email: jyong9591@gmail.com
 lang: ko-KR
 git_address: https://github.com/jiyong1
 
 markdown: kramdown
 highlighter: rouge
+
+
 permalink: pretty
-# permalink: pretty
+
 sass:
   sass_dir: assets/_sass
   style: compressed
+
+  exclude:
+  - Gemfile
+  - Gemfile.lock
+  - assets/css
+  - assets/images

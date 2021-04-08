@@ -17,13 +17,30 @@ body[data-mode='dark'] {
   color: whitesmoke;
   background: var(--dark-color);
   color: var(--border-light-color);
+  code:not(.highlight>code) {
+    background-color: #555;
+    color: white;
+  }
+  .highlight {
+    background-color: #252525;
+  }
 }
+
+
 body[data-mode='light'] {
   background-color: #f1f0e8;
   color: #303030;
   background-color: var(--bg-light-color);
   color: var(--dark-color);
+  code:not(.highlight>code) {
+    background-color: #bbb;
+    color: #111;
+  }
+  .highlight {
+    background-color: #555;
+  }
 }
+
 .nav-margin {
   margin-top: 8rem;
 }
