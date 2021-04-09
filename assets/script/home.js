@@ -67,7 +67,7 @@
   }
  
   window.addEventListener('resize', init);
-  setTimeout(init, 100);
+  
   carouselInterval = setInterval(nextSlide, 3000);
 
   carouselLeftButton.addEventListener('click', () => {
@@ -102,6 +102,6 @@
       carouselInterval = setInterval(nextSlide, 3000);
     })
   }
-
+  setTimeout(init, 500);
   makeAllTransparent();
 })();
