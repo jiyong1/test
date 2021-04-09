@@ -24,6 +24,11 @@ body[data-mode='dark'] {
   .highlight {
     background-color: #252525;
   }
+  @media (min-width: 576px){
+    #mode-btn {
+      background-color: var(--dark-color);
+    }
+  }
 }
 
 
@@ -38,6 +43,11 @@ body[data-mode='light'] {
   }
   .highlight {
     background-color: #555;
+  }
+  @media (min-width: 576px){
+    #mode-btn {
+      background-color: var(--bg-light-color);
+    }
   }
 }
 
