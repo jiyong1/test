@@ -62,7 +62,7 @@
   }
 
   window.addEventListener('scroll', function(){
-    if(pageYOffset == 0){
+    if(pageYOffset <= 0){
       navOpen();
     }
     else{
