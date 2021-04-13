@@ -4,7 +4,7 @@
   const navlistElem = document.querySelector('.nav-list');
   const toggleBtnElem = document.querySelector('.toggle-btn');
   const logoConElem = document.querySelector('.logo-con');
-  const modeBtnElem = document.querySelector('.mode-con');
+  const modeBtnElem = document.querySelector('#mode-btn');
   let toggle = false;
 
   function navOpen(){

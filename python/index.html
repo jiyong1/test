@@ -1,0 +1,24 @@
+---
+layout: default
+title: Python | Seven Two
+---
+
+<!-- {% for category in site.categories %}
+  <h3>{{ category[0] }} {{ category[1]|size }}</h3>
+  <ul>
+    {% for post in category[1] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <p>{{ post.date|date:"%y-%m-%d" }}</p>
+    <p>{{ post.path }}</p>
+    {% endfor %}
+  </ul>
+  <hr>
+{% endfor %} -->
+<h1>Python ({{ site.categories.python|size }})</h1>
+{% for post in site.categories.python %}
+  <a href="{{ post.url }}">
+    {{ post.title }}
+  </a>
+  <p>{{ post.date|date:"%y-%m-%d" }}</p>
+  <hr>
+{% endfor %}

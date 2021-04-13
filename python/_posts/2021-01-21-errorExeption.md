@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python 에러 처리"
-categories: [python]
+# categories: ['python']
 ---
 
 # 에러 & 예외 처리

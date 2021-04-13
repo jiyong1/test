@@ -3,16 +3,6 @@ layout: default
 title: Posts | Seven Two
 ---
 
-
-{% for category in site.categories %}
-  <h3>{{ category[0] }} {{ category[1]|size }}</h3>
-  <ul>
-    {% for post in category[1] %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    <p>{{ post.date|date:"%y-%m-%d" }}</p>
-    {% endfor %}
-  </ul>
-  <hr>
+{% for page in site.data.category %}
+  <a href="{{page.link}}">{{ page.name }}</a>
 {% endfor %}
-
-

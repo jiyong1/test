@@ -17,13 +17,6 @@ body[data-mode='dark'] {
   color: whitesmoke;
   background: var(--dark-color);
   color: var(--border-light-color);
-  code:not(.highlight>code) {
-    background-color: #555;
-    color: white;
-  }
-  .highlight {
-    background-color: #252525;
-  }
   @media (min-width: 576px){
     #mode-btn {
       background-color: var(--dark-color);
@@ -37,20 +30,32 @@ body[data-mode='light'] {
   color: #303030;
   background-color: var(--bg-light-color);
   color: var(--dark-color);
-  code:not(.highlight>code) {
-    background-color: #bbb;
-    color: #111;
-  }
-  .highlight {
-    background-color: #555;
-  }
   @media (min-width: 576px){
     #mode-btn {
       background-color: var(--bg-light-color);
     }
   }
 }
-
 .nav-margin {
   margin-top: 8rem;
+}
+
+.up-arrow {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2rem;
+  position: fixed;
+  bottom: 70px;
+  right: 40px;
+  color: inherit;
+  opacity: 0;
+  transition: .5s;
+}
+
+@media (max-width: 576px){
+  .up-arrow {
+    font-size: 1.5rem;
+    bottom: 20px;
+    right: 20px;
+  }
 }
