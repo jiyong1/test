@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python 에러 처리"
+title: "[Python] 에러 처리"
 # categories: ['python']
 ---
 

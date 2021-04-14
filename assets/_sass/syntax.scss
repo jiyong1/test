@@ -264,3 +264,13 @@ body[data-mode='light']{
     background-color: #555;
   }
 }
+
+p img{
+  width: 100%;
+}
+
+@media (min-width: 1000px){
+  p img{
+    width: 50%;
+  }
+}
